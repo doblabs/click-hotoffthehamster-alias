@@ -89,7 +89,7 @@ class ClickAliasedGroup(click.Group):
 
             rows = []
             for subcommand, cmd in commands:
-                help = cmd.get_short_help_str(limit)
+                help = cmd.get_short_help_str(ctx=ctx, limit=limit)
                 rows.append((subcommand, help))
 
             if rows:
