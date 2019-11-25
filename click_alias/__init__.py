@@ -55,44 +55,16 @@ class ClickAliasedGroup(click.Group):
         if command:
             return command
 
-    # SYNC_ME: (lb): This is nasty. Click v7 breaks the first version of this
-    # function (that I copied from some user's GitHub, and then I uploaded
-    # to PyPI). To make it play nice, ideally, we'd break up Click's base
-    # function, MultiCommand.format_commands, into pieces, so that we could
-    # just add 3 lines of new code and do nothing else. But that function is
-    # long, and we want to add a few lines to the middle of it; so we need to
-    # duplicate the whole function. So this block is 95% copy-paste, yuck!
-    def format_commands(self, ctx, formatter):
-        """Extra format methods for multi methods that adds all the commands
-        after the options.
-        """
+    # (lb): I forked Click and split up Click's base function,
+    # MultiCommand.format_commands, into pieces, so that we can
+    # just add the lines of new code we need and do nothing else.
+    def format_commands_fetch(self, ctx):
         commands = []
-        for subcommand in self.list_commands(ctx):
-            cmd = self.get_command(ctx, subcommand)
-            # What is this, the tool lied about a command.  Ignore it
-            if cmd is None:
-                continue
-            if cmd.hidden:
-                continue
-
-            # CLICK-ALIAS: THIS IS THE ONLY 3 lines IN THIS FUNC THAT ARE UNIQUE.
-            #   The rest of this function is a copy of the base class's function.
+        _commands = super(ClickAliasedGroup, self).format_commands_fetch(ctx)
+        for subcommand, cmd in _commands:
             if subcommand in self._commands:
                 aliases = ','.join(sorted(self._commands[subcommand]))
                 subcommand = '{0} ({1})'.format(subcommand, aliases)
-
             commands.append((subcommand, cmd))
-
-        # allow for 3 times the default spacing
-        if len(commands):
-            limit = formatter.width - 6 - max(len(cmd[0]) for cmd in commands)
-
-            rows = []
-            for subcommand, cmd in commands:
-                help = cmd.get_short_help_str(ctx=ctx, limit=limit)
-                rows.append((subcommand, help))
-
-            if rows:
-                with formatter.section('Commands'):
-                    formatter.write_dl(rows)
+        return commands
 
