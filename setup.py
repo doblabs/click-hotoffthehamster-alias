@@ -2,23 +2,22 @@
 
 from setuptools import setup
 
-with open('README.rst') as f:
-    readme = f.read()
+with open('README.md', 'r') as f:
+    long_description = f.read()
 
 setup(
     name='click-alias',
-    version='0.1.1.a3',
-    description='Click command aliaser',
-    long_description=readme,
+    version='1.0.1',
+    description='Enable aliases for Click',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author='Hot Off The Hamster',
     author_email='hotoffthehamster@gmail.com',
     url='https://github.com/hotoffthehamster/click-alias',
     license='MIT',
     packages=['click_alias'],
     install_requires=[
-        # FIXME: (lb): Using our own bleeding edge Click until v7 is released!
-        #'click',
-        'click--hotoffthehamster',
+        'click',
     ],
     extras_require={
         'dev': [
