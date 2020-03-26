@@ -1,6 +1,8 @@
 import click
 from click.testing import CliRunner
+
 from click_alias import ClickAliasedGroup
+
 import pytest
 
 
@@ -40,9 +42,9 @@ def test_foobar(runner):
 
 
 TEST_INVALID = """Usage: cli [OPTIONS] COMMAND [ARGS]...
-
+{}
 Error: No such command "bar".
-"""
+""".format('Try "cli --help" for help.\n')
 
 
 def test_invalid(runner):
