@@ -1,6 +1,6 @@
-import click
+import click_hotoffthehamster as click
 
-from click_alias import ClickAliasedGroup
+from click_hotoffthehamster_alias import ClickAliasedGroup
 
 
 @click.group(cls=ClickAliasedGroup)
