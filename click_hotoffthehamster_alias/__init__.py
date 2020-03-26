@@ -3,7 +3,7 @@
     to provide a group or command with aliases.
 """
 
-import click
+import click_hotoffthehamster as click
 
 
 class ClickAliasedGroup(click.Group):
@@ -58,6 +58,7 @@ class ClickAliasedGroup(click.Group):
     # (lb): I forked Click and split up Click's base function,
     # MultiCommand.format_commands, into pieces, so that we can
     # just add the lines of new code we need and do nothing else.
+    # (But that's not the only reason I forked Click!)
     def format_commands_fetch(self, ctx):
         commands = []
         _commands = super(ClickAliasedGroup, self).format_commands_fetch(ctx)
