@@ -1,7 +1,7 @@
-import click
-from click.testing import CliRunner
+import click_hotoffthehamster as click
+from click_hotoffthehamster.testing import CliRunner
 
-from click_alias import ClickAliasedGroup
+from click_hotoffthehamster_alias import ClickAliasedGroup
 
 import pytest
 
