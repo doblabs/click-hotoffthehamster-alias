@@ -1,8 +1,8 @@
-# click-aliases
+# click-hotoffthehamster-alias
 
-[![build](https://travis-ci.org/click-contrib/click-aliases.svg?branch=master)](https://travis-ci.org/click-contrib/click-aliases)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/click-contrib/click-aliases/master/LICENSE)
-[![coverage](https://coveralls.io/repos/github/click-contrib/click-aliases/badge.svg?branch=master)](https://coveralls.io/github/click-contrib/click-aliases?branch=master)
+[![build](https://travis-ci.org/hotoffthehamster/click-hotoffthehamster-alias.svg?branch=master)](https://travis-ci.org/hotoffthehamster/click-hotoffthehamster-alias)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/hotoffthehamster/click-hotoffthehamster-alias/master/LICENSE)
+[![coverage](https://coveralls.io/repos/github/hotoffthehamster/click-hotoffthehamster-alias/badge.svg?branch=master)](https://coveralls.io/github/hotoffthehamster/click-hotoffthehamster-alias?branch=master)
 
 Add (multiple) aliases to a click_ group or command.
 
