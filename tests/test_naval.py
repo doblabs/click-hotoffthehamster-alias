@@ -94,9 +94,6 @@ TEST_SHIP_HELP = """Usage: cli {cmd} [OPTIONS] COMMAND [ARGS]...
 
   Manages ships.
 
-Options:
-  --help  Show this message and exit.
-
 Commands:
   move (float,navigate)   Moves SHIP to the new location X,Y.
   new (add,build,create)  Creates a new ship.
