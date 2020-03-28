@@ -43,8 +43,8 @@ def test_foobar(runner):
 
 TEST_INVALID = """Usage: cli [OPTIONS] COMMAND [ARGS]...
 {}
-Error: No such command "bar".
-""".format('Try "cli --help" for help.\n')
+Error: No such command 'bar'.
+""".format("Try 'cli --help' for help.\n")
 
 
 def test_invalid(runner):
