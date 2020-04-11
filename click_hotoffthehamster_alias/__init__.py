@@ -68,4 +68,3 @@ class ClickAliasedGroup(click.Group):
                 subcommand = '{0} ({1})'.format(subcommand, aliases)
             commands.append((subcommand, cmd))
         return commands
-
