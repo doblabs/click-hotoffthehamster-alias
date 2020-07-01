@@ -7,7 +7,7 @@ with open('README.md', 'r') as f:
 
 setup(
     name='click-hotoffthehamster-alias',
-    version='1.0.2',
+    version='1.0.4',
     description='Add aliases to click-hotoffthehamster commands',
     long_description=long_description,
     long_description_content_type='text/markdown',
