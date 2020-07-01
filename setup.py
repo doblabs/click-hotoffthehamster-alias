@@ -24,8 +24,8 @@ setup(
             'flake8',
             'flake8-import-order',
             'tox-travis',
-            'pytest',
-            'pytest-cov',
+            'pytest >= 5.4.3',
+            'pytest-cov >= 2.10.0',
             'coveralls',
             'wheel',
         ]
