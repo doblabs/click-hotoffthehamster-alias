@@ -1,9 +1,8 @@
 import click_hotoffthehamster as click
+import pytest
 from click_hotoffthehamster.testing import CliRunner
 
 from click_hotoffthehamster_alias import ClickAliasedGroup
-
-import pytest
 
 
 @pytest.fixture(scope="function")
