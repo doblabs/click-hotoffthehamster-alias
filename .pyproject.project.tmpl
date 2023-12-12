@@ -2,10 +2,10 @@
 
 # vim:tw=0:ts=4:sw=4:et:norl:ft=toml
 # Author: Landon Bouma <https://tallybark.com/>
-# Project: https://github.com/doblabs/easy-as-pypi#🥧
+# Project: https://github.com/doblabs/click-hotoffthehamster-alias#🥸
 # License: MIT
 
-# Copyright (c) © 2020-2023 Landon Bouma. All Rights Reserved.
+# Copyright (c) © 2018-2020, 2023 Landon Bouma. All Rights Reserved.
 
 {% block project_meta -%}
 
@@ -13,15 +13,18 @@
 # REFER: https://peps.python.org/pep-0621/
 #   https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
 
-name = "easy-as-pypi"
+name = "click-hotoffthehamster-alias"
 version = "0.0.0"
-description = "Bootstrapping your next Python CLI made easy as PyPI"
+description = "Add aliases to click-hotoffthehamster commands"
 
-authors = ["Landon Bouma <doblabs@tallybark.com>"]
+authors = [
+    "Landon Bouma <doblabs@tallybark.com>",
+    "Robbin Bonthond <robbin@bonthond.com>",
+]
 maintainers = ["Tally Bark LLC <doblabs@tallybark.com>"]
 
 license = "MIT"
-readme = "README.rst"
+readme = "README.md"
 
 # REFER: https://pypi.org/classifiers/
 classifiers = [
@@ -70,18 +73,16 @@ include = [
 
 # ***
 
-# YOU: Disable this if your project derived from easy-as-pypi
-#      does not have a runnable script.
-#      - Otherwise set this to the package entry point.
-
-[tool.poetry.scripts]
-easy-as-pypi = "easy_as_pypi:cli"
+# YOU: Uncomment and customize to add a CLI entrypoint:
+#
+#   [tool.poetry.scripts]
+#   click-hotoffthehamster-alias = "click_hotoffthehamster_alias:cli"
 
 # ***
 
 [tool.easy_as_pypi]
 author = "Landon Bouma <https://tallybark.com/>"
-copy_years_owner = "2020-2023 Landon Bouma"
+copy_years_owner = "2018-2020, 2023 Landon Bouma"
 coc_contact_email = "tallybark+doblabs -at- gmail.com"
 
 # ***
@@ -107,25 +108,25 @@ coc_contact_email = "tallybark+doblabs -at- gmail.com"
 # WIRED: The Sphinx config (docs/conf.py) and .github/bin/update-poetry
 #        require that 'homepage' or 'repository' is set.
 
-homepage = "https://github.com/doblabs/easy-as-pypi#🥧"
+homepage = "https://github.com/doblabs/click-hotoffthehamster-alias#🥸"
 
 # Include 'repository' unless same as homepage.
-#  repository = "https://github.com/doblabs/easy-as-pypi"
+#  repository = "https://github.com/doblabs/click-hotoffthehamster-alias"
 
-history = "https://github.com/doblabs/easy-as-pypi/blob/release/HISTORY.rst"
+history = "https://github.com/doblabs/click-hotoffthehamster-alias/blob/release/HISTORY.rst"
 
-documentation = "https://easy-as-pypi.readthedocs.io/en/latest"
+documentation = "https://click-hotoffthehamster-alias.readthedocs.io/en/latest"
 
-issues = "https://github.com/doblabs/easy-as-pypi/issues"
+issues = "https://github.com/doblabs/click-hotoffthehamster-alias/issues"
 
-download = "https://pypi.org/project/easy-as-pypi/#files"
+download = "https://pypi.org/project/click-hotoffthehamster-alias/#files"
 
 {% endblock -%}
 
 {# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
 
 {% block isort_known_third_party -%}
-    "click",
+    "click_hotoffthehamster",
 {%- endblock %}
 
 {# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #}
@@ -139,9 +140,9 @@ download = "https://pypi.org/project/easy-as-pypi/#files"
 
 {% block project_dependencies -%}
 
-# - "Composable command line interface toolkit"
+# - Fork of "Composable command line interface toolkit"
 #
-#   https://pypi.org/project/click
-#   https://github.com/pallets/click
-click = "^8.0.0"
+#   https://pypi.org/project/click-hotoffthehamster
+#   https://github.com/doblabs/click-hotoffthehamster
+click-hotoffthehamster = "^7.8.0"
 {% endblock %}
