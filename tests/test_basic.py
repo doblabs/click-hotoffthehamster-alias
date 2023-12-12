@@ -18,7 +18,7 @@ def cli():
 
 @cli.command()
 def foo():
-    click.echo('foo')
+    click.echo("foo")
 
 
 TEST_HELP = """Usage: cli [OPTIONS] COMMAND [ARGS]...
@@ -37,16 +37,18 @@ def test_help(runner):
 
 
 def test_foobar(runner):
-    result = runner.invoke(cli, ['foo'])
-    assert result.output == 'foo\n'
+    result = runner.invoke(cli, ["foo"])
+    assert result.output == "foo\n"
 
 
 TEST_INVALID = """Usage: cli [OPTIONS] COMMAND [ARGS]...
 {}
 Error: No such command 'bar'.
-""".format("Try 'cli --help' for help.\n")
+""".format(
+    "Try 'cli --help' for help.\n"
+)
 
 
 def test_invalid(runner):
-    result = runner.invoke(cli, ['bar'])
+    result = runner.invoke(cli, ["bar"])
     assert result.output == TEST_INVALID

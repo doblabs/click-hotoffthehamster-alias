@@ -13,7 +13,7 @@ class ClickAliasedGroup(click.Group):
         self._aliases = {}
 
     def command(self, *args, **kwargs):
-        aliases = kwargs.pop('aliases', [])
+        aliases = kwargs.pop("aliases", [])
         decorator = super(ClickAliasedGroup, self).command(*args, **kwargs)
         if not aliases:
             return decorator
@@ -29,7 +29,7 @@ class ClickAliasedGroup(click.Group):
         return _decorator
 
     def group(self, *args, **kwargs):
-        aliases = kwargs.pop('aliases', [])
+        aliases = kwargs.pop("aliases", [])
         decorator = super(ClickAliasedGroup, self).group(*args, **kwargs)
         if not aliases:
             return decorator
@@ -64,7 +64,7 @@ class ClickAliasedGroup(click.Group):
         _commands = super(ClickAliasedGroup, self).format_commands_fetch(ctx)
         for subcommand, cmd in _commands:
             if subcommand in self._commands:
-                aliases = ','.join(sorted(self._commands[subcommand]))
-                subcommand = '{0} ({1})'.format(subcommand, aliases)
+                aliases = ",".join(sorted(self._commands[subcommand]))
+                subcommand = "{0} ({1})".format(subcommand, aliases)
             commands.append((subcommand, cmd))
         return commands
