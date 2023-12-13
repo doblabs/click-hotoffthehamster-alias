@@ -5,6 +5,8 @@
 
 import click_hotoffthehamster as click
 
+__version__ = ""
+
 
 class ClickAliasedGroup(click.Group):
     def __init__(self, *args, **kwargs):
