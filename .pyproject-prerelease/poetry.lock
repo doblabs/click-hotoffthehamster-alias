@@ -329,16 +329,20 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
 name = "click-hotoffthehamster"
-version = "7.8.1.post1.dev0+5d258e7"
+version = "7.8.1"
 description = "Composable command line interface toolkit"
 optional = false
-python-versions = "*"
-files = []
-develop = true
+python-versions = ">=3.8.1,<4.0.0"
+files = [
+    {file = "click_hotoffthehamster-7.8.1-py3-none-any.whl", hash = "sha256:06c1eecb8b8054be878650e953d3fe13167a6c4e17d9c1b48bd1ff44ac88cdd8"},
+    {file = "click_hotoffthehamster-7.8.1.tar.gz", hash = "sha256:10d334a6663a439b7c8cd5d4139c1521c687e1a6125dbd555290e7cb80b6a047"},
+]
 
-[package.source]
-type = "directory"
-url = "../../click-hotoffthehamster/.pyproject-editable"
+[package.dependencies]
+colorama = {version = ">=0.4.6,<0.5.0", markers = "sys_platform == \"win32\""}
+
+[package.extras]
+readthedocs = ["sphinx (>=6.2.1,<7.0.0)", "sphinx (>=7.2.6,<8.0.0)", "sphinx-rtd-theme (>=2.0.0rc4,<3.0.0)", "tomli (>=2.0.1)"]
 
 [[package]]
 name = "codecov"
@@ -2102,4 +2106,4 @@ readthedocs = ["sphinx", "sphinx", "sphinx-rtd-theme", "tomli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.1"
-content-hash = "f38a6b12352eadbc0e803c2c62258e981dec8fa752b444060348f3cc78a3617c"
+content-hash = "082ce58f15a20b02f7df5ff0713e33037a534e199c9d10040f430ec48f747350"
