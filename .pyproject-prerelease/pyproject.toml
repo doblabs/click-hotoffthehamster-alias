@@ -994,5 +994,5 @@ sphinx-rtd-theme = { version = "^2.0.0rc4", optional = true }
 #
 #   https://pypi.org/project/click-hotoffthehamster
 #   https://github.com/doblabs/click-hotoffthehamster
-click-hotoffthehamster = { version = "^7.8.0", source = "testpypi" }
+click-hotoffthehamster = { version = "^7.8.0", source = "testpypi", allow-prereleases = true }
 
