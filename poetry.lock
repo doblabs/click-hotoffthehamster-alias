@@ -329,13 +329,13 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
 name = "click-hotoffthehamster"
-version = "7.8.2"
+version = "7.8.3"
 description = "Composable command line interface toolkit"
 optional = false
 python-versions = ">=3.8.1,<4.0.0"
 files = [
-    {file = "click_hotoffthehamster-7.8.2-py3-none-any.whl", hash = "sha256:4020ed5d9b0c0067ad69e867ac4deac4890af5b41dab34115e9f6ed8103676ec"},
-    {file = "click_hotoffthehamster-7.8.2.tar.gz", hash = "sha256:4d6c289fcdf4e8456d181f4e0a86f76a5e3c76c2390330f23459507335c87336"},
+    {file = "click_hotoffthehamster-7.8.3-py3-none-any.whl", hash = "sha256:6007f77fdb705376c1856ecb656e34a7b9bdb013c08836db2e960568ffe5b011"},
+    {file = "click_hotoffthehamster-7.8.3.tar.gz", hash = "sha256:601141eeb8110a4a48c28ac50429858d212e1123ae56d703a45327d22fd44185"},
 ]
 
 [package.dependencies]
